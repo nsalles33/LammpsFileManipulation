@@ -1084,7 +1084,7 @@ def multiple_timestep_singular_file_dumps(file_path:str,ids:list = ["TimestepDef
             #adding to dictionary
             if ids == ["TimestepDefault"]:
                 #using timestep to insert
-                dump_files[int(dump_class.timestep)] = dump_class
+                dump_files[int(dump_class.sim_timestep)] = dump_class
             else:
                 #using custom id
                 dump_files[ids[ind]] = dump_class
@@ -1116,7 +1116,7 @@ def batch_import_files(file_paths:list,ids:list = ["TimestepDefault"]):
             #adding to dictionary
             if ids == ["TimestepDefault"]:
                 #using timestep to insert
-                dump_files[int(dump_class.timestep)] = dump_class
+                dump_files[int(dump_class.sim_timestep)] = dump_class
             else:
                 #using custom id
                 dump_files[ids[ind]] = dump_class
